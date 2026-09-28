@@ -71,10 +71,13 @@ export default function Home() {
       {/* 3. The Tactile Ritual */}
       <TactileRitualSection />
 
-      {/* 4. The Initiated */}
-      <TestimonialsSection />
+      {/* 4. The Legend */}
+      <LegendSection />
 
-      {/* 5. Footer */}
+      {/* 5. Philosophy */}
+      <PhilosophySection />
+
+      {/* 6. Footer */}
       <Footer />
     </main>
   );
@@ -198,78 +201,73 @@ function TactileRitualSection() {
   );
 }
 
-const testimonials = [
-  {
-    quote: "It doesn't just scent the skin; it becomes it. A dark, beautiful secret I wear only for myself—and for him.",
-    author: "E.V."
-  },
-  {
-    quote: "The silk against bare skin, the lingering myrrh... SI YU understands that true luxury is entirely intimate.",
-    author: "M.R."
-  },
-  {
-    quote: "A ritual I look forward to every night. It strips away the noise and leaves pure, tactile desire.",
-    author: "C.L."
-  }
-];
-
-function TestimonialsSection() {
+function LegendSection() {
   return (
-    <section className="relative py-32 w-full overflow-hidden bg-brand-black">
-      {/* Subtle ambient light */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[50vh] bg-neutral-800/10 rounded-[100%] blur-[100px] pointer-events-none" />
+    <section className="relative py-40 w-full flex items-center justify-center bg-brand-black overflow-hidden">
+      {/* Subtle night sky/celestial glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vw] h-[80vh] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-900/40 via-brand-black to-brand-black opacity-50" />
       
-      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div className="text-center mb-24 space-y-6">
-          <h2 className="font-serif text-3xl md:text-5xl text-white font-light">
-            The Initiated
-          </h2>
-          <p className="font-sans text-neutral-500 tracking-widest text-sm uppercase">
-            The lovely people who discovered our secret
-          </p>
-        </div>
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-15%" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-10"
+      >
+        <p className="text-brand-amber font-sans tracking-[0.2em] text-sm uppercase">Chapter III / The Legend</p>
+        
+        <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white font-light leading-snug">
+          Legend speaks of the archer Hou Yi, gifted an elixir of immortality. To protect it from darkness, his beloved Chang'e consumed the golden liquid, ascending to the moon forever.
+        </h2>
+        
+        <p className="font-sans text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+          SI YU is born from this eternal midnight longing—a homage to the elixir that bridges mortal touch and the night sky.
+        </p>
+      </motion.div>
+    </section>
+  );
+}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-10%" }}
-              transition={{ delay: i * 0.2, duration: 0.8 }}
-              className="group relative p-10 backdrop-blur-sm border border-neutral-800/50 hover:border-brand-amber/30 hover:bg-neutral-900/30 transition-all duration-500 rounded-sm overflow-hidden"
-            >
-              {/* Hover Glow */}
-              <div className="absolute inset-0 bg-gradient-to-b from-brand-amber/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10 flex flex-col h-full justify-between space-y-8">
-                <p className="font-serif text-xl md:text-2xl text-neutral-400 group-hover:text-neutral-200 transition-colors duration-500 italic leading-relaxed">
-                  "{t.quote}"
-                </p>
-                <p className="font-sans text-brand-amber tracking-[0.2em] text-sm uppercase">
-                  — {t.author}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+function PhilosophySection() {
+  return (
+    <section className="relative py-32 w-full bg-neutral-950 flex flex-col items-center justify-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-20%" }}
+        transition={{ duration: 1 }}
+        className="max-w-3xl mx-auto px-6 text-center space-y-12"
+      >
+        <div className="w-px h-16 bg-brand-amber/30 mx-auto" />
+        
+        <blockquote className="font-serif text-2xl md:text-4xl text-neutral-300 font-light leading-relaxed italic">
+          "We believe true allure is immortal. Our philosophy exists in the space between myth and bare skin—where ancient botanical rituals meet modern tactile desires."
+        </blockquote>
+        
+        <p className="font-sans text-brand-amber tracking-[0.2em] text-sm uppercase">
+          Every drop of perfume and lather of silk is designed to awaken the night.
+        </p>
+      </motion.div>
     </section>
   );
 }
 
 function Footer() {
   return (
-    <footer className="w-full py-16 border-t border-neutral-900 bg-brand-black flex flex-col items-center justify-center space-y-10">
-      <div className="font-serif text-3xl text-brand-amber-light uppercase tracking-widest flex items-center gap-4">
-        <span>SI YU</span>
-        <span className="font-sans text-xl opacity-80">丝欲</span>
+    <footer className="w-full py-32 border-t border-neutral-900 bg-brand-black flex flex-col items-center justify-center space-y-16 text-center">
+      <div className="space-y-6">
+        <div className="font-serif text-4xl text-brand-amber-light uppercase tracking-widest flex items-center justify-center gap-4">
+          <span>SI YU</span>
+          <span className="font-sans text-2xl opacity-80">丝欲</span>
+        </div>
+        
+        <p className="font-serif text-2xl text-neutral-400 italic font-light tracking-wide">
+          Soon to be available, for you.
+        </p>
       </div>
       
       <div className="flex items-center space-x-12 font-sans text-xs tracking-[0.2em] uppercase text-neutral-500">
         <Link href="/boutique" className="hover:text-brand-amber transition-colors">Boutique</Link>
-        <a href="#" className="hover:text-brand-amber transition-colors">Philosophy</a>
-        <a href="#" className="hover:text-brand-amber transition-colors">Contact</a>
       </div>
       
       <p className="text-neutral-700 text-xs font-sans">
