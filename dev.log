@@ -1,0 +1,18 @@
+npm notice run siyu@0.1.0 dev
+npm notice run next dev
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://10.88.0.4:3001
+✓ Ready in 606ms
+✓ Running next.config.ts took 60ms
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          10116
+- Dir:          /home/ewilliamhe/SIYU
+- Log:          .next/dev/logs/next-development.log
+
+You can access the existing server at http://localhost:3000,
+or run kill 10116 to stop it and start a new one.
+[?25h

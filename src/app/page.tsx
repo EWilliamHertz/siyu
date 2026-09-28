@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
-
+import Link from "next/link";
 export default function Home() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -51,14 +51,16 @@ export default function Home() {
             </span>
           </div>
           
-          <motion.button 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="mt-16 px-8 py-3 border border-brand-amber/30 text-brand-amber hover:bg-brand-amber hover:text-brand-black transition-all duration-500 font-sans tracking-widest text-sm uppercase cursor-pointer"
-          >
-            Enter the Night
-          </motion.button>
+          <Link href="/boutique">
+            <motion.button 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="mt-16 px-8 py-3 border border-brand-amber/30 text-brand-amber hover:bg-brand-amber hover:text-brand-black transition-all duration-500 font-sans tracking-widest text-sm uppercase cursor-pointer"
+            >
+              Enter the Boutique
+            </motion.button>
+          </Link>
         </motion.div>
       </section>
 
@@ -261,7 +263,7 @@ function Footer() {
       </div>
       
       <div className="flex items-center space-x-12 font-sans text-xs tracking-[0.2em] uppercase text-neutral-500">
-        <a href="#" className="hover:text-brand-amber transition-colors">Boutique</a>
+        <Link href="/boutique" className="hover:text-brand-amber transition-colors">Boutique</Link>
         <a href="#" className="hover:text-brand-amber transition-colors">Philosophy</a>
         <a href="#" className="hover:text-brand-amber transition-colors">Contact</a>
       </div>

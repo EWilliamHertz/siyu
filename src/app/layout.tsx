@@ -1,17 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "SI YU 丝欲 | Modern Nordic Luxury",
@@ -25,8 +13,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+      </head>
       <body
-        className={`${cormorant.variable} ${inter.variable} antialiased bg-black text-neutral-200 font-sans selection:bg-amber-900/30 selection:text-amber-200`}
+        className="antialiased bg-black text-neutral-200 font-sans selection:bg-amber-900/30 selection:text-amber-200"
+        style={{
+          '--font-cormorant': '"Cormorant Garamond"',
+          '--font-inter': '"Inter"',
+        } as React.CSSProperties}
       >
         {children}
       </body>
