@@ -106,8 +106,9 @@ export default function BoutiquePage() {
                   {product.price}
                 </span>
               </div>
-              <p className="font-sans text-neutral-500 text-sm leading-relaxed font-light h-10">
-                {product.description}
+              <p className="font-sans text-neutral-500 text-sm leading-relaxed font-light min-h-[3.5rem]">
+                <span className="block mb-1">{product.description.split(" / ")[0]}</span>
+                <span className="block">{product.description.split(" / ")[1]}</span>
               </p>
               
               <button className="mt-4 w-full py-4 border border-neutral-800 text-neutral-400 font-sans text-xs uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-500">
