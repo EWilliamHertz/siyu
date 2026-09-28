@@ -217,7 +217,8 @@ function LegendSection() {
         <p className="text-brand-amber font-sans tracking-[0.2em] text-sm uppercase">Chapter III / The Legend</p>
         
         <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white font-light leading-snug">
-          Legend speaks of the archer Hou Yi, gifted an elixir of immortality. To protect it from darkness, his beloved Chang'e consumed the golden liquid, ascending to the moon forever.
+          Legend speaks of the archer Hou Yi, gifted an elixir of immortality.<br />
+          <span className="block mt-4 md:mt-6">To protect it from darkness, his beloved Chang'e consumed the golden liquid, ascending to the moon forever.</span>
         </h2>
         
         <p className="font-sans text-neutral-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
@@ -238,8 +239,6 @@ function PhilosophySection() {
         transition={{ duration: 1 }}
         className="max-w-3xl mx-auto px-6 text-center space-y-12"
       >
-        <div className="w-px h-16 bg-brand-amber/30 mx-auto" />
-        
         <blockquote className="font-serif text-2xl md:text-4xl text-neutral-300 font-light leading-relaxed italic">
           "We believe true allure is immortal. Our philosophy exists in the space between myth and bare skin—where ancient botanical rituals meet modern tactile desires."
         </blockquote>
