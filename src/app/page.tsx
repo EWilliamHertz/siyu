@@ -43,10 +43,11 @@ export default function Home() {
           className="relative z-10 flex flex-col items-center justify-center text-center"
         >
           <div className="relative">
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] tracking-widest text-brand-amber-light font-light uppercase z-10 relative">
-              SI YU
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-[10rem] tracking-widest text-brand-amber-light font-light uppercase z-10 relative flex flex-col items-center">
+              <span>SI YU</span>
+              <span className="text-3xl md:text-5xl mt-4 font-sans tracking-[0.5em] opacity-80">丝欲</span>
             </h1>
-            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] text-white/[0.02] font-serif whitespace-nowrap -z-10 select-none">
+            <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[12rem] md:text-[20rem] text-white/[0.05] font-serif whitespace-nowrap -z-10 select-none">
               丝欲
             </span>
           </div>
@@ -100,6 +101,7 @@ function AlchemySection() {
               src="/100ml Bottle SiYu.JPG" 
               alt="100ml Bottle SiYu" 
               fill 
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000"
             />
             {/* Glass reflection sheen */}
@@ -186,6 +188,7 @@ function TactileRitualSection() {
               src="/Bars of Soap.JPG" 
               alt="Bars of Soap" 
               fill 
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />
           </motion.div>
@@ -258,8 +261,9 @@ function TestimonialsSection() {
 function Footer() {
   return (
     <footer className="w-full py-16 border-t border-neutral-900 bg-brand-black flex flex-col items-center justify-center space-y-10">
-      <div className="font-serif text-3xl text-brand-amber-light uppercase tracking-widest">
-        SI YU
+      <div className="font-serif text-3xl text-brand-amber-light uppercase tracking-widest flex items-center gap-4">
+        <span>SI YU</span>
+        <span className="font-sans text-xl opacity-80">丝欲</span>
       </div>
       
       <div className="flex items-center space-x-12 font-sans text-xs tracking-[0.2em] uppercase text-neutral-500">

@@ -83,6 +83,7 @@ export default function BoutiquePage() {
                 src={product.image}
                 alt={product.name}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               {/* Sheen Overlay */}
@@ -118,10 +119,11 @@ export default function BoutiquePage() {
       </div>
       
       {/* Footer minimal */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full mt-32 pt-12 border-t border-neutral-900 flex justify-center">
-         <p className="text-neutral-700 text-xs font-sans">
-          © {new Date().getFullYear()} SI YU. All rights reserved.
-        </p>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full mt-32 pt-12 border-t border-neutral-900 flex justify-center space-x-4">
+        <span className="text-neutral-500 font-serif tracking-widest">SI YU 丝欲</span>
+        <span className="text-neutral-700 text-xs font-sans mt-1">
+          © {new Date().getFullYear()} All rights reserved.
+        </span>
       </div>
     </main>
   );
