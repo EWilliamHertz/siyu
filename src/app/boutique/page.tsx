@@ -125,7 +125,7 @@ export default function BoutiquePage() {
       
       {/* Footer minimal */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full mt-32 pt-12 border-t border-neutral-900 flex justify-center space-x-4">
-        <span className="text-neutral-500 font-serif tracking-widest">SI YU 丝欲</span>
+        <span className="text-neutral-500 font-serif tracking-widest">SI YU | 丝欲</span>
         <span className="text-neutral-700 text-xs font-sans mt-1">
           © {new Date().getFullYear()} All rights reserved.
         </span>

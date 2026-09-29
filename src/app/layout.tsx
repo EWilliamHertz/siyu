@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SI YU 丝欲 | Modern Nordic Luxury",
+  title: {
+    default: "SI YU | 丝欲",
+    template: "%s | SI YU | 丝欲"
+  },
   description: "A luxury sensual brand. Dark allure meets modern nordic luxury.",
 };
 
